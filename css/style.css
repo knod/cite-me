@@ -1,0 +1,402 @@
+/*citation.css*/
+
+/*
+SECTIONS:
+	ON EVERY PAGE
+		Header
+		Main Content
+			Menu
+			Main Body
+			Footer
+	HOME PAGE
+	RESEARCH PAGE
+
+I am told everything should be classes now, no id's
+*/
+
+/* Red */
+/*#b40404*/
+
+/* --- ON EVERY PAGE --- */
+
+html {
+	/*height: 100%;*/  /* Only min-height was working before */
+	background-color: lightgray;
+	font: normal medium '?', Helvetica, sans-serif;
+	border: 1px solid black;
+}
+
+body {
+	/*height: 100%;*/  /* Only min-height was working before */ /* With flexbox this will ruin things */
+	/*width: 75%;*/
+	min-width: 750px;
+	margin: 0 auto;  /* Centers stuff in parent */
+	/*margin-top: 1%;*/
+	padding: 0;
+	text-align: center;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	/*border: 1px solid black;*/
+}
+
+body .main.page-section, body .header.page-section {
+    width: 75%;
+    min-width: 750px;
+}
+
+body .main.page-section { margin: 0 auto; }
+body .header.page-section { margin: 0 auto; }
+body .header-spacer {
+	width: 100%;
+	height: 10px;
+}
+body .header-spacer.bottom { height: 12px; }
+
+div {
+	/*border: 1px solid black;*/
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+h1, h2, h3, h4, table, td, tr, a, img {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	direction: none;
+}
+
+h1 {
+	/*text-transform:capitalize;*/
+    /*font-variant:small-caps;*/
+	/*font-size: 35px;*/
+	/*color: #b40404;*/
+}
+
+h3 {
+	text-align: left;
+	margin: 0 0 5px 0;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #b40404;
+}
+/*
+a {
+	display: block;
+	color: black;
+}*/
+
+hr {
+	margin: 6px auto;
+	width: 95%;
+}
+
+a:hover, a:focus {
+	text-decoration: underline;
+}
+
+/* - Header - */
+.page-section {
+	box-shadow: 3px 2px 10px -2px;
+}
+
+.header {
+	text-align: left;
+	margin: 1% 0;
+	padding: .5rem 0;
+	background-color: white;
+}
+
+.header a, .header a:hover, .header a:focus, .header a:active .header a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.logo {
+	display: inline-block;
+	padding: 1% 2%;
+	vertical-align: middle;
+}
+
+img.sloan-logo {
+	display: block; /* To get rid of extra spacing at bottom */
+	height: 4rem;
+	width: auto;
+}
+
+.header-text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.postion-title {
+	margin-top: .28rem;
+}
+
+/* - Main Content - */
+/* Container */
+.main {
+	/* Height perhaps taken care of by flexbox, perhaps by js */
+	background-color: white;
+}
+
+.main.flex-container {
+	min-height: 0;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* Menu */
+.menu {
+	display: inline-block;
+	width: 90%;
+	padding: 0;
+	text-align: left;
+}
+
+.menu a {
+	/*display: inline-block;*/
+	float: left;
+	margin: 0 1px;
+	/*background-color: #b40404;*/
+	padding: .1rem .4rem;
+	color: #b40404;
+	/*border: 1px solid black;*/
+	border-radius: 1px;
+}
+
+.menu a:hover, .menu a:focus {
+	text-decoration: underline;
+}
+
+
+.menu a:first-child {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+a.cv-link {
+	color: #2E91E9;
+}
+
+/* Main Body */
+
+/* Footer */
+img.mit-logo {
+	height: 20px;
+}
+
+.copyright {
+	text-align: center;
+	margin: 2%;
+	font-size: 10px;
+}
+
+/* http://the-echoplex.net/flexyboxes/?legacy=on&display=flex&flex-direction=
+column&flex-wrap=nowrap&justify-content=flex-start&align-items=center&align-
+content=space-around&order%5B%5D=0&flex-grow%5B%5D=1&flex-shrink%5B%5D=1&flex
+-basis%5B%5D=&align-self%5B%5D=auto
+and
+http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+Altered a little because two iterations were needed. */
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    }
+
+.flex-item {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    }
+
+/* As it appears above:
+.main.flex-container {
+	min-height: 0;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+} */
+
+/*
+    Legacy Firefox implementation treats all flex containers
+    as inline-block elements.
+*/
+
+@-moz-document url-prefix() {
+.flex-container {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    }
+}
+
+/* --- HOME PAGE --- */
+.content {
+	margin: 10px 2% 0 2%;
+	text-align: left;
+	min-width: 650px;
+	width: 90%;
+}
+
+.home-main {
+	/* With flexbox this is left aligned on purpose */
+	position: relative;
+}
+
+.left-side {
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+	text-align: left;
+}
+
+.right-side {
+	float: right;
+	text-align: center;
+	vertical-align: top;
+}
+
+img.bio-photo {
+	width: 300px;
+	margin: 5% 0;
+	border: 2px solid #666666;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* Bold to start, underlined on hover?
+Underlined to start, bold on hover?*/
+.photo-cv {
+	display: block;
+	color: #2E91E9;
+	text-decoration: underline;
+}
+
+/*.photo-cv:hover {
+	font-weight: bold;
+}*/
+
+/* --- ABOUT PAGE --- */
+.about-heading {
+	color: black;
+}
+
+
+/* --- RESEARCH PAGE --- */
+.research-main {
+}
+
+.paper-section:first {
+
+}
+
+.paper-section {
+	/*margin: 0 0 20px 0;*/
+	/*border: .18em solid white;
+	border-radius: 3px;
+	border-top-color: rgb(130, 130, 130);
+	border-right-color: rgb(240, 240, 240);
+	border-left-color: rgb(230,230,230);
+	border-bottom-color: rgb(230, 230, 230);
+	background-color: rgb(220,220,220);*/
+}
+
+.in-paper-section {
+	padding-top: .3rem;
+}
+
+.section-header {
+	color: #b40404;
+	/*background: rgb(190, 190, 190);*/
+}
+
+.paper {
+	padding-bottom: .3rem;
+}
+
+.paper-title {
+	display: inline;
+	margin: 0;
+	color: black;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.in-paper-section a {
+	color: #2E91E9;
+	font-style: normal;
+}
+
+.citation {
+	font-style: italic;
+}
+
+.note {
+	color: #b40404;
+}
+
+.honor {
+	font-style: italic;
+}
+
+/* Holds the collapsed version of the image for the arrow */
+/* I think it may be easier to change images with css which
+is why I have it in here instead of in the html, but I'm not
+completely sure. I just saw more info out there for this way */
+.arrow {
+	/*inline-block seemed to negate need for padding*/
+	display: inline-block;
+    background: url(256px-red-arrow-right.png) no-repeat;
+	background-size: contain;
+	margin: 0;
+	height: .75rem;
+	width: .8rem;
+	/* For some reason padding was needed to make the image appear
+    padding-right: 15px;*/
+    vertical-align: middle;
+}
+
+.expanded {
+	background-image: url(256px-red-arrow-down.png);
+}
+
+.abstract-label {
+	margin: .2rem 0 .5rem 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #2E91E9;
+	cursor: hand;
+	cursor: pointer;
+}
+
+/* Lines the arrow up with the text */
+.abstract-label span {
+	vertical-align: text-top;
+	padding-right: 6px;
+}
+
+.abstract-text {
+	margin: 0 0 25px 0;
+}

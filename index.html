@@ -1,0 +1,92 @@
+<!-- create-citation.html -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Citation Creator</title>
+
+	<!-- CSS -->
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='css/creator.css' rel='stylesheet' type='text/css'>
+
+	<!-- JS -->
+	<script src='js/third-party/jquery.js'></script>
+
+	<script src='js/collapsible.js'></script>
+	<script src='js/create.js'></script>
+
+</head>
+
+<body class='flex-container'>
+
+	<header class='page-section'><h1>Paper Citation Creator</h1></header>
+
+	<hr />
+
+	<div class='form-container input page-section'>
+		<div class='instructions'>
+			<em>The only required field is Title (and maybe authors). Just try it out.</em>
+		</div>
+
+		<form action=''>
+			<label for='title'>Paper Title</label>
+			<input type='text' name='title' class='wide' id='title_input' placeholder='Long Title of Important Paper' />
+
+			<label for='authors'>Author Text (including names, "and", and commas. Example: Bob Marley, William Shatner, and Brobot)</label>
+			<input type='text' name='authors' class='wide' id='authors_input' placeholder='Bob Marley, William Shatner, and Brobot' />
+
+			<label for='citation'>Citation</label>
+			<input type='text' name='citation' class='wide' id='citation_input' placeholder='2047 Journal of Stuff' />
+
+			<!-- <br />
+
+			<div class='inline'>
+				<input type="checkbox" name='pdf-confirmation' id='hasPDF' />
+				<label for="pdf-confirmation">Inclue a PDF</label>
+			</div> -->
+			<label for='pdf_ref' class='pdf-ref'>PDF Directory (include containing folders if needed)</label>
+			<input type="text" name='pdf-ref'  class='pdf-ref wide' id='pdf_input' placeholder='Name_of_PDF.pdf' />
+
+			<label for="honor_input">Honor/Award</label>
+			<input type="text" class="wide" id="honor_input" placeholder='Best In Show' />
+
+			<!-- <br />
+
+			<div class='inline'>
+				<input type="checkbox" name='abstract-confirmation' id='hasAbstract' />
+				<label for="abstract-confirmation">Include an abstract</label>
+			</div> -->
+			<label for="abstract-text" class='abstract-text-input'>Abstract Text</label>
+			<textarea name='abstract-text' class='abstract-text-input wide' id='abstract_input' placeholder='You know what to do here. *wink wink*'></textarea>
+		</form>
+	</div>
+
+	<hr />
+
+	<div class='output-visual page-section flex-item flex-container' >
+
+		<div class='research-main content flex-item'>
+			<div class='paper-section'>
+
+				<div class='in-paper-section'>
+
+				</div>
+
+			</div>
+		</div>
+	</div> <!-- end .output-visual -->
+
+	<hr />
+
+	<div class='page-section'>
+		<div class='instructions'>
+			<em>Copy and paste this html into your own html in the right place.</em>
+		</div>
+		<textarea id='output_html' disabled='true'></textarea>
+	</div>
+	
+</body>
+</html>
+

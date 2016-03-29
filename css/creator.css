@@ -1,0 +1,56 @@
+/*creator.css*/
+
+body {
+	margin: 10px 20px;
+}
+
+
+/* ------------------ */
+/* FORM */
+/* ------------------ */
+form, input, label {
+	display: block;
+}
+.inline input, .inline label {
+	display: inline-block;
+}
+
+input.wide, textarea.wide {
+	width: 75%;
+}
+
+.form-container {
+	text-align: left;
+
+}
+form {
+	margin: 2% 2%;
+}
+
+#output_html {
+	min-height: 400px;
+	width: 90%;
+	margin: 0 5%;
+}
+
+/* For Prettier */
+.instructions {
+	margin: 10px 2%;
+	color: #CB0000;
+}
+
+.page-section {
+	padding: 8px;
+	background-color: #E8E8E8;
+}
+
+.flex-container {
+	min-height: 75px;
+}
+
+
+/* ------------------ */
+/* OVERRIDE CITATION CSS */
+/* ------------------ */
+/* The below hides the comma too */
+.paper, .paper-authors-container { display: none; }
